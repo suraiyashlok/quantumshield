@@ -9,8 +9,13 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "quantumshield2026"
-CORS(app, origins="*")
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+CORS(app, origins="*", supports_credentials=True)
+socketio = SocketIO(app, 
+    cors_allowed_origins="*",
+    async_mode="threading",
+    logger=True,
+    engineio_logger=True
+)
 
 # ─────────────────────────────────────────────
 # FIPS STANDARDS
