@@ -3,7 +3,7 @@ import { io } from "socket.io-client"
 import { Shield, Search, AlertTriangle, CheckCircle, XCircle, Download, ChevronDown, ChevronRight, Zap } from "lucide-react"
 import { RadialBarChart, RadialBar, ResponsiveContainer, Cell } from "recharts"
 
-const SOCKET_URL = "http://localhost:5000"
+const SOCKET_URL = "https://quantumshield-production.up.railway.app"
 
 // ─── RISK HELPERS ───────────────────────────
 function getRiskColor(score) {
